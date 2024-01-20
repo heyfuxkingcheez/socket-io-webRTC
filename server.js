@@ -10,6 +10,8 @@ configDotenv();
 const app = express();
 const server = createServer(app);
 
+app.use('/', express.static('src'));
+
 app.use(
     cors({
         origin: 'http://localhost:8000',

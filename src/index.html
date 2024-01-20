@@ -9,9 +9,32 @@
 </head>
 
 <body>
+  <div id="room-selection-container" class='centered'>
+    <h1>WebRTC video conference</h1>
+    <label>Enter the number of the room you want to connect</label>
+    <input id='room-input' type='text' />
+    <button id='connect-button'>CONNECT</button>
+  </div>
 
+  <div id='video-chat-container' class='video-position' style="display: none;">
+    <video id='local-video' autoplay='autoplay'></video>
+    <br>
+    <button id="mute">음소기</button>
+    <select id="audio-select">
+
+    </select>
+    <button id="camera">카메라 끄기</button>
+    <select id="camera-select">
+
+    </select>
+
+    <video id='remote-video' autoplay='autoplay'></video>
+  </div>
 </body>
-<script src="/socket.io/socket.io.js"></script>
+<script src=" /socket.io/socket.io.js">
+</script>
+<script type="module" src="./client.js"></script>
+<script type="module" src="../server.js"></script>
 
 
 
